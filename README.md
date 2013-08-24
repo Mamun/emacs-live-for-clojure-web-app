@@ -26,13 +26,13 @@ Start, stop server and switch cljs repl
 (defonce the-system nil)
 
 (defn start
-  "Starts the current development system."
+  "Start current development system."
   []
   (alter-var-root #'the-system (constantly (sys/system)))
   (alter-var-root #'the-system server-start ))
 
 (defn stop
-  "Shuts down and destroys the current development system."
+  "stop development system."
   []
   (when the-system
     (alter-var-root #'the-system
