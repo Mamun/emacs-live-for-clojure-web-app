@@ -9,18 +9,15 @@ Start, stop server and switch cljs repl
 
 ### Usage
 
-1. Create a file with dev.clj
-2. Define fn with start, stop and cljs
+1. Create a file with [dev.clj]
+2. Define fn with [start stop cljs]
 3. Key binding {:f9 start :f8 stop :f10 cljs-repl f11 clj-repl }
 
 
 ### dev.clj
 
 (ns dev
-  (:use
-   [server]
-   [clojure.pprint :only [print-table]])
-  (:require [zme.system :as sys]
+  (:require [system :as sys]
             [cljs.repl.browser] ))
 
 (defonce the-system nil)
@@ -39,10 +36,6 @@ Start, stop server and switch cljs repl
                     (fn [s] (when s
                              (server-stop s)
                              (sys/stop) )))))
-
-(defn go []
-  (stop)
-  (start))
 
 (defn cljs-repl []
   (cemerick.piggieback/cljs-repl
