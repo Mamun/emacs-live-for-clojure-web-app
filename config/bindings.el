@@ -7,7 +7,7 @@
 ;;(define-key global-map (kbd "C--") 'text-scale-decrease)
 
 
-(defun dev-go ()
+(defun dev-start ()
     "Evaluate the current buffer's namespace form."
       (interactive)
       (message "Server is strarting...")
@@ -40,7 +40,7 @@
      (nrepl-set-ns "user"))
 
 
-(global-set-key (kbd "<f9>") 'dev-go )
+(global-set-key (kbd "<f9>") 'dev-start )
 (global-set-key (kbd "<f8>") 'dev-stop )
 (global-set-key (kbd "<f10>") 'cljs )
 (global-set-key (kbd "<f11>") 'cljs-quit )
