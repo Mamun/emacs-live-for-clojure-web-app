@@ -1,3 +1,3 @@
-(live-pack-name "user-template-pack")
+(live-pack-name "clojure-workflow-pack")
 (live-pack-version "0.0.1alpha")
-(live-pack-description "Your own user pack - modify and customise this to your hearts content.")
+(live-pack-description "Clojure workflow plugin easy to start, stop and switch between clj -> cljs.")
