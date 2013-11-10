@@ -4,7 +4,9 @@ Start, stop server and switch cljs repl
 
 ### install
 
-Download from https://github.com/Mamun/emacs-live-clojure-workflow.git to emacs live packs.
+Download this pluging to emacs live packs.
+
+Add this pack to .emacs-live.el. 
 
 (add-live-packs "~/.emacs-live-packs/" '("clojure-workflow"))
 
@@ -12,8 +14,9 @@ Download from https://github.com/Mamun/emacs-live-clojure-workflow.git to emacs 
 ### Usage
 
 1. lein new web-app hello
-2. Open project using emacs-live
-3. Key binding {:f9 start-server :C-f9 stop-server :C-f11 for repl switch }
+2. Open project using emacs-live.
+3. Start repl.  
+4. Press key to start and stop server. Key binding {:f9 start-server :C-f9 stop-server :C-f11 for repl switch }
 
 
 ### License
