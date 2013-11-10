@@ -4,6 +4,8 @@ Start, stop server and switch cljs repl
 
 ### install
 
+Download from https://github.com/Mamun/emacs-live-clojure-workflow.git to emacs live packs.
+
 (add-live-packs "~/.emacs-live-packs/" '("clojure-workflow"))
 
 
