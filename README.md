@@ -16,7 +16,7 @@ Add this pack to .emacs-live.el.
 1. lein new web-app hello
 2. Open project using emacs-live.
 3. Start repl.  
-4. Press key to start and stop server. Key binding {:f9 start-server :C-f9 stop-server :C-f11 for repl switch }
+4. 4. Press :f9 to start server :C-f9 to stop server :C-f11 for repl switch 
 
 
 ### License
