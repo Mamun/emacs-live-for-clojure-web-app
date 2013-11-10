@@ -1,4 +1,4 @@
-###Emacs live pack for clojure workflow
+###Emacs live pack for clojure and clojure script web app
 
 Start, stop server and switch cljs repl 
 
