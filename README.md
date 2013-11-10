@@ -8,7 +8,7 @@ Download this pluging to emacs live packs.
 
 Add this pack to .emacs-live.el. 
 
-(add-live-packs "~/.emacs-live-packs/" '("clojure-workflow"))
+(add-live-packs "~/.emacs-live-packs/{name}/emacs-live-for-clojure-web-app")
 
 
 ### Usage
