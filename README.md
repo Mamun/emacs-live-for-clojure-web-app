@@ -11,7 +11,7 @@ Start, stop server and switch cljs repl
 
 1. lein new web-app hello
 2. Open project using emacs-live
-3. Key binding {:f9 start :C-<f9> stop :C-<f11> for repl switch }
+3. Key binding {:f9 start-server :C-f9 stop-server :C-f11 for repl switch }
 
 
 ### License
