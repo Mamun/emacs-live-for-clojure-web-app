@@ -6,57 +6,28 @@
 
 (defun switch-repl ()
   (interactive)
-  (if (= repl 0)
-      (progn
-        (message "please wait, repl will switch for ClojureScript")
-        (nrepl-interactive-eval " (do
-                                     (require 'cljs.repl.browser)
-                                     (cemerick.piggieback/cljs-repl
-                                            :repl-env (doto
-                                              (cljs.repl.browser/repl-env :cport 9000)
-                                              (cljs.repl/-setup))))")
-        (nrepl-set-ns "cljs.user")
-        (setq repl 1))
-    (progn
-      (message "please wait, repl will switch for Clojure")
-      (nrepl-interactive-eval ":cljs/quit" )
-      (nrepl-set-ns "user")
-      (setq repl 0))))
+  (progn
+    (nrepl-interactive-eval "(do  (command-handler :C-F11)) " )
+    (nrepl-set-ns "cljs.user")))
 
 
 (defun dev-start ()
   "Evaluate the current buffer's namespace form."
   (interactive)
-  (if (= repl 0)
-      (progn
-        (message "Server is strarting...")
-        (nrepl-interactive-eval "(do
-                                 (require 'dev)
-                                 (dev/command-execute :start)) " ))
-      (message "Please switch to clojure repl")))
+  (nrepl-interactive-eval "(do (command-handler :F9)) " ))
 
 
 (defun dev-stop ()
   "Evaluate the current buffer's namespace form."
   (interactive)
-  (if (= repl 0)
-      (progn
-        (message "Server is stoping...." )
-        (nrepl-interactive-eval "(do (require 'dev)
-                                   (dev/command-execute :stop)) " ))
-      (message "Please switch to clojure repl")))
+  (nrepl-interactive-eval "(do (command-handler :C-F9)) " ))
 
 
 (defun app-event ()
   "Evaluate the current buffer's namespace form."
   (interactive)
-  (if (= repl 0)
-      (progn
-        (message "New event send to app" )
-        (nrepl-interactive-eval "(do (require 'dev)
-                                   (dev/command-execute :event)) " ))
-    (progn
-      (message "Please switch to clojure repl"))))
+  (nrepl-set-ns (nrepl-interactive-eval " (command-handler :event) " ))
+  )
 
 
 (eval-after-load 'nrepl
