@@ -26,8 +26,8 @@
 (defun app-event ()
   "Evaluate the current buffer's namespace form."
   (interactive)
-  (nrepl-set-ns (nrepl-interactive-eval " (command-handler :event) " ))
-  )
+  (nrepl-interactive-eval " (command-handler :event) " ))
+  
 
 
 (eval-after-load 'nrepl
